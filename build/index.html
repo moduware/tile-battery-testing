@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Battery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="manifest" href="manifest.json">    
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- vendor -->
+    <link rel="stylesheet" href="vendor/mdl/material.min.css">
+
+    <!-- nexpaq libs -->
+    <script type="text/javascript" src="js/NexpaqHeader.js"></script>
+
+    <!-- partials -->
+
+    <!-- screens -->
+
+    <!-- tools-->
+
+    <!-- core -->
+    <script type="text/javascript" src="vendor/mdl/material.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </head>
+  <body>
+    <br>
+
+    <table class="measurments-table mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+      <thead>
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric">Icon</th>
+          <th class="mdl-data-table__cell--non-numeric">Title</th>
+          <th class="mdl-data-table__cell--non-numeric">Value</th>
+          <th class="mdl-data-table__cell--non-numeric">Unit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric"><i class="material-icons">list</i></td>
+          <td class="mdl-data-table__cell--non-numeric">State</td>
+          <td class="mdl-data-table__cell--non-numeric" id="batteryState" colspan="2">n/a</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric"><i class="material-icons">battery_charging_full</i></td>
+          <td class="mdl-data-table__cell--non-numeric">Voltage</td>
+          <td id="batteryVoltage">n/a</td>
+          <td class="mdl-data-table__cell--non-numeric">V</td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric"><i class="material-icons">battery_unknown</i></td>
+          <td class="mdl-data-table__cell--non-numeric">Percentage</td>
+          <td id="batteryPercentage">n/a</td>
+          <td class="mdl-data-table__cell--non-numeric">%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class= "current-control">
+      <p>Set current control for the battery charge:</p>
+      <br>
+      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+        <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+        <span class="mdl-radio__label">100ma</span>
+      </label>
+      &nbsp;
+      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+        <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+        <span class="mdl-radio__label">250ma</span>
+      </label>
+      &nbsp;
+      &nbsp;
+      <button class="mdl-button mdl-js-button mdl-button--raised" id="Current">Set</button>
+    </div>
+
+     <br>
+     <button class="mdl-button mdl-js-button mdl-button--raised" id="checkStatus">Check status</button>
+     <br>
+
+      <div class="main-controls">
+        <button class="mdl-button mdl-js-button mdl-button--raised" id="Standby">Standby</button>
+        &nbsp;
+        <button class="mdl-button mdl-js-button mdl-button--raised" id="Charge">Charge</button>
+        &nbsp;
+        <button class="mdl-button mdl-js-button mdl-button--raised" id="Discharge">Discharge</button>
+        &nbsp;
+        <button class="mdl-button mdl-js-button mdl-button--raised" id="Shutdown">Shutdown</button>
+      </div>
+    <br>
+  </body>
+</html>
